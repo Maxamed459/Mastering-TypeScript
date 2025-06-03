@@ -1,1 +1,1 @@
-This is a repo i'm using to master TypeScript and the course i'm currently taking is  [Dusiiye's TypeScript Course](https://www.youtube.com/playlist?list=PL4cUxeGkcC9jLYyp2Aoh6hcWuxFDX6PBJ)
+This is a repo i'm using to master TypeScript and the course i'm currently taking is  [Dusiiye's TypeScript Course](https://youtu.be/IAnXue08ewY?si=aMycs7rjezcJ1qtZ)
