@@ -1,46 +1,50 @@
-// number 
-let age: number = 25;
-console.log(age);
+//
 
-// string
-let myName: string = "maxamed";
-console.log(myName);
+// type
+// type User = {
+//     name: string,
+//     age: number
+// }
 
-// array
-let numbers: number[] = [1, 2, 3, 4, 5];
-console.log(numbers.slice(0, 3));
+// let User1: User = {
+//     name: "mohamed",
+//     age: 10
+// }
 
-// tuple
-let person: [string, number] = ["maxamed", 25];
-console.log(person);
+// interface
+// interface User {
+//   name: string;
+//   age: number;
+//   description: string;
+// }
 
-// enum
-enum Gender {Male, Female}
+// let User1: User = {
+//   name: "moh4",
+//   age: 20,
+//   description: "Student at SIU",
+// };
 
-let myGender: Gender =  Gender.Male;
-console.log(myGender);
-
-enum Roles {Admin, User, Guest}
-let currentUser: Roles = Roles.Admin;
-
-// any
-let randomValue: any = "Hello";
-randomValue = 42; // can be reassigned to any type
-console.log(randomValue);
-
-// void
-function logMessage(message: string): void {
-    console.log(message);
+// generics
+// without generic
+function containsString(arr: string[], item: string): boolean {
+  return arr.includes(item);
 }
-logMessage("This is a void function");
+console.log(containsString(["m", "n", "o"], "o"));
 
-const returnValue  = (number: number): number => {
-    return number * 2;
+function containsNumber(arr: number[], item: number): boolean {
+  return arr.includes(item);
 }
-console.log(returnValue(5));
+console.log(containsNumber([1, 2, 3], 1));
 
-const nameConsole: (a: number, b: number) => number = (a,b) => {
-    return a + b;
+// with generics
+function contains<T>(arr: T[], item: T) {
+  return arr.includes(item);
 }
+console.log(contains<string>(["m", "n", "o"], "o"));
+console.log(contains<number>([1, 2, 3], 6));
 
-console.log(nameConsole(2, 5)); 
+// interface with generic
+interface pair<T, U> {
+  first: T;
+  second: U;
+}
